@@ -12,6 +12,7 @@
   --logo-color-three: #ffffff;
   --contact-header-color: #757575;
   --paragraph-color: #757575;
+  --what-we-do-text-color: #ffffff;
   --accent-color-one: #188ce8;
   --accent-color-two: #2196f3;
   --h1-color: #ffffff;
@@ -59,6 +60,9 @@ ol {
 }
 img {
   display: block;
+}
+.btn {
+  cursor: pointer;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -112,6 +116,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover {
   color: var(--accent-color-one);
@@ -131,11 +136,13 @@ body {
   letter-spacing: 0.02em;
   color: var(--contact-header-color);
   margin-left: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-header-icon {
   margin-right: 10px;
   fill: var(--contact-header-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts-header + .link-contacts-header {
   margin-left: 50px;
@@ -192,12 +199,12 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn:hover {
+.hero-btn:hover {
   background-color: var(--button-accent-bckgrnd);
-  cursor: pointer;
 }
-.btn:focus {
+.hero-btn:focus {
   background-color: var(--button-accent-bckgrnd);
 }
 /* -------ADVANTAGES------- */
@@ -251,10 +258,28 @@ body {
   flex-wrap: wrap;
 }
 .what-we-do-item {
+  position: relative;
   margin-right: 30px;
 }
 .what-we-do-item:nth-child(3n) {
   margin-right: 0;
+}
+.what-we-do-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--what-we-do-text-color);
 }
 /* -------TEAM SQUAD------- */
 .our-team {
@@ -317,9 +342,11 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-icon {
   fill: var(--icon-color-one);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-link:focus,
 .team-social-link:hover {
@@ -366,9 +393,11 @@ body {
   align-items: center;
   outline: 1px solid var(--icon-color-one);
   border-radius: 4px;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   fill: var(--icon-color-one);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:focus,
 .clients-link:hover {
@@ -408,6 +437,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--address-footer-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts-footer {
   display: block;
@@ -417,6 +447,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--contact-footer-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts-footer:hover,
 .link-address-footer:hover {
@@ -455,6 +486,7 @@ body {
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
   fill: var(--icon-color-two);
@@ -490,9 +522,13 @@ body {
   letter-spacing: 0.03em;
   border-radius: 4px;
   border-style: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-btn-filter:hover,
 .portfolio-btn-filter:focus {
+  background-color: var(--button-accent-bckgrnd);
   color: var(--button-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -517,6 +553,7 @@ body {
 .portfolio-content-link {
   display: block;
   padding-bottom: 20px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-content-link:hover,
 .portfolio-content-link:focus {
