@@ -125,7 +125,18 @@ body {
   color: var(--accent-color-one);
 }
 .header-link-active {
+  position: relative;
   color: var(--active-page-color);
+}
+.header-link-active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--active-page-color);
 }
 .link-contacts-header {
   display: inline-flex;
